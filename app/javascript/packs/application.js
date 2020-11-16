@@ -18,4 +18,5 @@ require("jquery")
 // const imagePath = (name) => images(name, true)
 
 import "bootstrap"
+import "@fortawesome/fontawesome-free/css/all.css";
 
