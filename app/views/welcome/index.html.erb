@@ -1,4 +1,2 @@
-<h1>Welcome to the finance tracker app</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome <%= current_user.full_name %> <br> to the finance tracker app</h1>
 
-<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
