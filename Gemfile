@@ -25,6 +25,7 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'iex-ruby-client'
 gem "font-awesome-rails"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -34,6 +35,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do
