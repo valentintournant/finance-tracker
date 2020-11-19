@@ -10,6 +10,19 @@ class UsersController < ApplicationController
     @tracked_stocks = current_user.stocks
   end
 
+  def my_portfolio_update
+    @tracked_stocks = current_user.stocks
+    @tracked_stocks.each do |stock|
+      new_stock = Stock.new_lookup(stock.ticker)
+        if new_stock.last_price != stock.last_price
+          stock.before_price = stock.last_price
+          stock.last_price = new_stock.last_price
+        end
+        stock.save
+      end
+    redirect_to my_portfolio_path
+  end
+
   def my_friends
     @friends = current_user.friends
   end

@@ -7,6 +7,11 @@
           <th scope="col">Name</th>
           <th scope="col">Price</th>
           <th scope="col">Action</th>
+          <tr scope="col">
+            <% if current_user.id == @user.id %>
+              <%= link_to "Update Prices", my_portfolio_update_path, class: "btn btn-sm btn-success" %>
+            <% end %>
+          </tr>
         </tr>
       </thead>
       <tbody>
